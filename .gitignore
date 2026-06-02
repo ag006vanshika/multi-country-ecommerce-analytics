@@ -5,6 +5,9 @@ venv/
 __pycache__/
 *.pyc
 
+# Data files
+sample_data/source/
+
 # Environment files
 .env
 
