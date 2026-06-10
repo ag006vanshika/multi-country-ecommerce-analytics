@@ -33,7 +33,10 @@ def lambda_handler(event, context):
     s3.put_object(
         Bucket=BUCKET_NAME,
         Key=file_key,
-        Body=json.dumps(records, indent=2)
+        Body="\n".join(
+        json.dumps(record)
+        for record in records
+)
     )
 
     return {
